@@ -5,7 +5,7 @@
 #include <cstring>
 
 #include "CycleTimer.h"
-
+#include <ctime>
 double cudaFindRepeats(int *input, int length, int *output, int *output_length); 
 double cudaScan(int* start, int* end, int* resultarray);
 double cudaScanThrust(int* start, int* end, int* resultarray);
