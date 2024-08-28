@@ -1,3 +1,11 @@
-.html
-.ppm
-.cu_inl
+*.html
+*.ppm
+*.cu_inl
+
+render/logs
+render/objs
+
+saxpy/objs
+
+scan/objs
+scan/logs
