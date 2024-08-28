@@ -1,6 +1,5 @@
 *.html
 *.ppm
-*.cu_inl
 
 render/logs
 render/objs
