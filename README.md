@@ -61,7 +61,8 @@ To gain a bit of practice writing CUDA programs your warm-up task is to re-imple
 from Assignment 1 in CUDA. Starter code for this part of the assignment is located in the `/saxpy` directory
 of the assignment repository. You can build and run the saxpy CUDA program by calling `make` and `./cudaSaxpy` in the `/saxpy` directory.
 
-Please finish off the implementation of SAXPY in the function `saxpyCuda` in `saxpy.cu`. You will need to allocate device global memory arrays and copy the contents of the host input arrays `X`, `Y`, and `result` into CUDA device memory prior to performing the computation. After the CUDA computation is complete, the result must be copied back into host memory. Please see the definition of `cudaMemcpy` function in Section 3.2.2 of the Programmer's Guide (web version), or take a look at the helpful tutorial pointed to in the assignment starter code.
+Please finish off the implementation of SAXPY in the function `saxpyCuda` in `saxpy.cu`. You will need to **allocate** -> (memory allocation) device global memory arrays and copy the contents of the host input arrays `X`, `Y`, and `result` into CUDA device memory prior to performing the computation. 
+After the CUDA computation is complete, the result must be copied back into host memory. Please see the definition of `cudaMemcpy` function in Section 3.2.2 of the Programmer's Guide (web version), or take a look at the helpful tutorial pointed to in the assignment starter code.
 
 As part of your implementation, add timers around the CUDA kernel invocation in `saxpyCuda`. After your additions, your program should time two executions:
 
@@ -69,7 +70,7 @@ As part of your implementation, add timers around the CUDA kernel invocation in 
 
 * You should also insert timers the measure *only the time taken to run the kernel*. (They should not include the time of CPU-to-GPU data transfer or transfer of results from the GPU back to the CPU.)
 
-__When adding your timing code in the latter case, you'll need to be careful:__ By defult a CUDA kernel's execution on the GPU is *asynchronous* with the main application thread running on the CPU.  For example, if you write code that looks like this:
+__When adding your timing code in the latter case, you'll need to be careful:__ By defult a CUDA kernel's execution on the GPU is ***asynchronous*** with the main application thread running on the CPU.  For example, if you write code that looks like this:
 
 ~~~~
 double startTime = CycleTimer::currentSeconds();
@@ -89,13 +90,13 @@ cudaDeviceSynchronize();
 double endTime = CycleTimer::currentSeconds();
 ~~~~
 
-Note that in your measurements that include the time to transfer to and from the CPU, a call to `cudaDeviceSynchronize()` __is not__ necessary before the final timer (after your call to `cudaMemcopy()` that returns data to the CPU) because `cudaMemcpy()` will not return to the calling thread until after the copy is complete. 
+Note that in your measurements that include the time to transfer to and from the CPU, a call to `cudaDeviceSynchronize()` __is not__ necessary before the final timer (after your call to `cudaMemcpy()` that returns data to the CPU) because `cudaMemcpy()` will not return to the calling thread until after the copy is complete. 
 
 __Question 1.__ What performance do you observe compared to the sequential CPU-based implementation of
 SAXPY (recall your results from saxpy on Program 5 from Assignment 1)? 
 
 __Question 2.__ Compare and explain the difference between the results
-provided by two sets of timers (timing only the kernel execution vs. timing the entire process of moving data to the GPU and back in addition to the kernel execution). Are the bandwidth values observed *roughly* consistent with the reported bandwidths available to the different components of the machine? (You should use the web to track down the memory bandwidth of an NVIDIA T4 GPU. Hint: <https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/tesla-t4/t4-tensor-core-datasheet-951643.pdf>. The expected bandwidth of memory bus of AWS is 4 GB/s, which does not match that of a 16-lane [PCIe 3.0](https://en.wikipedia.org/wiki/PCI_Express). Several factors prevent peak bandwidth, including CPU motherboard chipset performance and whether or not the host CPU memory used as the source of the transfer is “pinned” — the latter allows the GPU to directly access memory without going through virtual memory address translation. If you are interested, you can find more info here: <https://kth.instructure.com/courses/12406/pages/optimizing-host-device-data-communication-i-pinned-host-memory>)
+provided by two sets of timers (timing only the kernel execution vs. timing the entire process of moving data to the GPU and back in addition to the kernel execution). Are the bandwidth values observed *roughly* consistent with the reported bandwidths available to the different components of the machine? (You should use the web to track down the memory bandwidth of an NVIDIA T4 GPU. Hint: <https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/tesla-t4/t4-tensor-core-datasheet-951643.pdf>. The expected bandwidth of memory bus of AWS is 4 GB/s, which does not match that of a 16-lane [PCIe 3.0](https://en.wikipedia.org/wiki/PCI_Express). Several factors prevent peak bandwidth, including **CPU motherboard chipset performance** and whether or not the host CPU memory used as the source of the transfer is “pinned” — the latter allows the GPU to directly access memory without going through **virtual memory address translation**. If you are interested, you can find more info here: <https://kth.instructure.com/courses/12406/pages/optimizing-host-device-data-communication-i-pinned-host-memory>)
 
 ## Part 2: CUDA Warm-Up 2: Parallel Prefix-Sum (10 pts) ##
 
@@ -182,6 +183,7 @@ Scan Score Table:
 ~~~~
 
 This part of the assignment is largely about getting more practice with writing CUDA and thinking in a data parallel manner, and not about performance tuning code. Getting full performance points on this part of the assignment should not require much (or really any) performance tuning, just a direct port of the algorithm pseudocode to CUDA.  However, there's one trick:  a naive implementation of scan might launch N CUDA threads for each iteration of the parallel loops in the pseudocode, and using conditional execution in the kernel to determine which threads actually need to do work.  Such a solution will not be performant! (Consider the last outmost loop iteration of the upsweep phase, where only two threads would do work!).  A full credit solution will only launch one CUDA thread for each iteration of the innermost parallel loops.
+Therefore, check for condition **out of the kernel**.
 
 **Test Harness:** By default, the test harness runs on a pseudo-randomly generated array that is the same every time
 the program is run, in order to aid in debugging. You can pass the argument `-i random` to run on a random array - we
@@ -307,7 +309,7 @@ Program Options:
 
 **Checker code:** To detect correctness of the program, `render` has a convenient `--check` option. This option runs the sequential version of the reference CPU renderer along with your CUDA renderer and then compares the resulting images to ensure correctness. The time taken by your CUDA renderer implementation is also printed.
 
-We provide a total of five circle datasets you will be graded on.  However, in order to receive full credit, your code must pass all of our correctness-tests.  To check the correctness and performance score of your code, run **`./checker.py`** (notice the .py extension) in the `/render` directory. If you run it on the starter code, the program will print a table like the following, along with the results of our entire test set: 
+We provide a total of five circle datasets you will be graded on.  However, in order to receive full credit, your code must pass all of our correctness-tests.  To check the correctness and **performance score of your code**, run **`./checker.py`** (notice the .py extension) in the `/render` directory. If you run it on the starter code, the program will print a table like the following, along with the results of our entire test set: 
 
 ~~~~
 ------------

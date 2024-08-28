@@ -1,0 +1,393 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/brianlee/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.13/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  font-family: Microsoft YaHei;
+  /* prince设置参数 */
+}
+.markdown-preview.markdown-preview.prince {
+  /* 添加页码 */
+}
+@page {
+  @bottom {
+    font-family: Microsoft YaHei;
+    content: counter(page) " / " counter(pages);
+  }
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="assignment-3-a-simple-cuda-renderer-">Assignment 3: A Simple CUDA Renderer # </h1>
+<p><strong>Due:  Wed Nov 8, 11:59PM PST</strong></p>
+<p><strong>100 points total</strong></p>
+<p><img src="handout/teaser.jpg?raw=true" alt="My Image"></p>
+<h2 id="overview-">Overview ## </h2>
+<p>In this assignment you will write a parallel renderer in CUDA that draws colored circles.<br>
+While this renderer is very simple, parallelizing the renderer will require you to design and implement data structures<br>
+that can be efficiently constructed and manipulated in parallel. This is a challenging<br>
+assignment so you are advised to start early. <strong>Seriously, you are advised to start early.</strong> Good luck!</p>
+<h2 id="environment-setup-">Environment Setup ## </h2>
+<ol>
+<li>
+<p>You will collect results (i.e. run performance tests) for this assignment on GPU-enabled VMs on Amazon Web Services (AWS). Please follow the instructions in <a href="cloud_readme.md">cloud_readme.md</a> for setting up a machine to run the assignment.</p>
+</li>
+<li>
+<p>Download the Assignment starter code from the course Github using:</p>
+</li>
+</ol>
+<p><code>git clone https://github.com/stanford-cs149/asst3</code></p>
+<p>The CUDA C programmer's guide <a href="http://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf">PDF version</a> or <a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/">web version</a>  is an excellent reference for learning how to program in CUDA. There are a wealth of CUDA tutorials and SDK examples on the web (just Google!) and on the <a href="http://docs.nvidia.com/cuda/">NVIDIA developer site</a>.  In particular, you may enjoy the free Udacity course <a href="https://www.udacity.com/course/cs344">Introduction to Parallel Programming in CUDA</a>.</p>
+<p>Table G.1 in the <a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/#compute-capabilities">CUDA C Programming Guide</a> is a handy reference for the maximum number of CUDA threads per thread block, size of thread block, shared memory, etc for the NVIDIA T4 GPUs you will used in this assignment.  NVIDIA T4 GPUs support CUDA compute capability 7.5.</p>
+<p>For C++ questions (like what does the <em>virtual</em> keyword mean), the <a href="https://isocpp.org/faq">C++ Super-FAQ</a> is a great resource that explains things in a way that's detailed yet easy to understand (unlike a lot of C++ resources), and was co-written by Bjarne Stroustrup, the creator of C++!</p>
+<h3 id="warning-">WARNING ### </h3>
+<p>To save resources, the VMs will auto stop after 15 minutes of &lt; 2% CPU activity.</p>
+<p>This means that that the VM will close if you are not doing CPU intensive work such as writing code.</p>
+<p>Because of this, we recommend that you develop your code locally, and either copy your code into the machines manually or connect use git to pull your commits to the VM. Using git is nice because you can go back to previous versions of your code.</p>
+<p>If you have not set up a private git repo before here are some resources that should help you get started. Make sure that the github repo is private to ensure that you are not breaking the honor code.</p>
+<p>Useful links to set up git:</p>
+<ul>
+<li><a href="https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories">adding a remote repository</a> to connect to your private repo.</li>
+<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">adding ssh key</a> to set up a ssh key. We recommending doing this without a password and with the default name id_rsa.</li>
+</ul>
+<p>Once you have a ssh key and know how to connect to a remote repository, you will need to do the following two things to set up your environment.</p>
+<ol>
+<li>Copy your private key to the server's .ssh folder (id_rsa in your .ssh) file</li>
+<li>Create a file named config in the server and locally with the following lines.</li>
+</ol>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa
+</code></pre><p>You should now be able to pull and push commits from the server and locally!</p>
+<h2 id="part-1-cuda-warm-up-1-saxpy-5-pts-">Part 1: CUDA Warm-Up 1: SAXPY (5 pts) ## </h2>
+<p>To gain a bit of practice writing CUDA programs your warm-up task is to re-implement the SAXPY function<br>
+from Assignment 1 in CUDA. Starter code for this part of the assignment is located in the <code>/saxpy</code> directory<br>
+of the assignment repository. You can build and run the saxpy CUDA program by calling <code>make</code> and <code>./cudaSaxpy</code> in the <code>/saxpy</code> directory.</p>
+<p>Please finish off the implementation of SAXPY in the function <code>saxpyCuda</code> in <code>saxpy.cu</code>. You will need to allocate device global memory arrays and copy the contents of the host input arrays <code>X</code>, <code>Y</code>, and <code>result</code> into CUDA device memory prior to performing the computation. After the CUDA computation is complete, the result must be copied back into host memory. Please see the definition of <code>cudaMemcpy</code> function in Section 3.2.2 of the Programmer's Guide (web version), or take a look at the helpful tutorial pointed to in the assignment starter code.</p>
+<p>As part of your implementation, add timers around the CUDA kernel invocation in <code>saxpyCuda</code>. After your additions, your program should time two executions:</p>
+<ul>
+<li>
+<p>The provided starter code contains timers that measure <strong>the entire process</strong> of copying data to the GPU, running the kernel, and copying data back to the CPU.</p>
+</li>
+<li>
+<p>You should also insert timers the measure <em>only the time taken to run the kernel</em>. (They should not include the time of CPU-to-GPU data transfer or transfer of results from the GPU back to the CPU.)</p>
+</li>
+</ul>
+<p><strong>When adding your timing code in the latter case, you'll need to be careful:</strong> By defult a CUDA kernel's execution on the GPU is <em>asynchronous</em> with the main application thread running on the CPU.  For example, if you write code that looks like this:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>double startTime = CycleTimer::currentSeconds();
+saxpy_kernel&lt;&lt;&lt;blocks, threadsPerBlock&gt;&gt;&gt;(N, alpha, device_x, device_y, device_result);
+double endTime = CycleTimer::currentSeconds();
+</code></pre><p>You'll measure a kernel execution time that seems amazingly fast! (Because you are only timing the cost of the API call itself, not the cost of actually executing the resulting computation on the GPU.</p>
+<p>Therefore, you will want to place a call to <code>cudaDeviceSynchronize()</code> following the<br>
+kernel call to wait for completion of all CUDA work on the GPU.  This call to <code>cudaDeviceSynchronize()</code> returns when all prior CUDA work on the GPU has completed. Note that <code>cudaDeviceSynchronize()</code> is not necessary after the <code>cudaMemcpy()</code> to ensure the memory transfer to the GPU is complete, since <code>cudaMempy()</code> is synchronous under the conditions we are using it. (For those that wish to know more, see <a href="https://docs.nvidia.com/cuda/cuda-runtime-api/api-sync-behavior.html#api-sync-behavior__memcpy-sync">this documentation</a>.)</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>double startTime = CycleTimer::currentSeconds();
+saxpy_kernel&lt;&lt;&lt;blocks, threadsPerBlock&gt;&gt;&gt;(N, alpha, device_x, device_y, device_result);
+cudaDeviceSynchronize();
+double endTime = CycleTimer::currentSeconds();
+</code></pre><p>Note that in your measurements that include the time to transfer to and from the CPU, a call to <code>cudaDeviceSynchronize()</code> <strong>is not</strong> necessary before the final timer (after your call to <code>cudaMemcopy()</code> that returns data to the CPU) because <code>cudaMemcpy()</code> will not return to the calling thread until after the copy is complete.</p>
+<p><strong>Question 1.</strong> What performance do you observe compared to the sequential CPU-based implementation of<br>
+SAXPY (recall your results from saxpy on Program 5 from Assignment 1)?</p>
+<p><strong>Question 2.</strong> Compare and explain the difference between the results<br>
+provided by two sets of timers (timing only the kernel execution vs. timing the entire process of moving data to the GPU and back in addition to the kernel execution). Are the bandwidth values observed <em>roughly</em> consistent with the reported bandwidths available to the different components of the machine? (You should use the web to track down the memory bandwidth of an NVIDIA T4 GPU. Hint: <a href="https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/tesla-t4/t4-tensor-core-datasheet-951643.pdf">https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/tesla-t4/t4-tensor-core-datasheet-951643.pdf</a>. The expected bandwidth of memory bus of AWS is 4 GB/s, which does not match that of a 16-lane <a href="https://en.wikipedia.org/wiki/PCI_Express">PCIe 3.0</a>. Several factors prevent peak bandwidth, including CPU motherboard chipset performance and whether or not the host CPU memory used as the source of the transfer is “pinned” — the latter allows the GPU to directly access memory without going through virtual memory address translation. If you are interested, you can find more info here: <a href="https://kth.instructure.com/courses/12406/pages/optimizing-host-device-data-communication-i-pinned-host-memory">https://kth.instructure.com/courses/12406/pages/optimizing-host-device-data-communication-i-pinned-host-memory</a>)</p>
+<h2 id="part-2-cuda-warm-up-2-parallel-prefix-sum-10-pts-">Part 2: CUDA Warm-Up 2: Parallel Prefix-Sum (10 pts) ## </h2>
+<p>Now that you're familiar with the basic structure and layout of CUDA programs, as a second exercise you are asked to come up with parallel implementation of the function <code>find_repeats</code> which, given a list of integers <code>A</code>, returns a list of all indices <code>i</code> for which <code>A[i] == A[i+1]</code>.</p>
+<p>For example, given the array <code>{1,2,2,1,1,1,3,5,3,3}</code>, your program should output the array <code>{1,3,4,8}</code>.</p>
+<h4 id="exclusive-prefix-sum-">Exclusive Prefix Sum #### </h4>
+<p>We want you to implement <code>find_repeats</code> by first implementing parallel exclusive prefix-sum operation.</p>
+<p>Exlusive prefix sum takes an array <code>A</code> and produces a new array <code>output</code> that has, at each index <code>i</code>, the sum of all elements up to but not including <code>A[i]</code>. For example, given the array <code>A={1,4,6,8,2}</code>, the output of exclusive prefix sum <code>output={0,1,5,11,19}</code>.</p>
+<p>The following "C-like" code is an iterative version of scan.  In the pseudocode before, we use <code>parallel_for</code> to indicate potentially parallel loops.   This is the same algorithm we discussed in class: <a href="http://cs149.stanford.edu/fall23/lecture/dataparallel/slide_17">http://cs149.stanford.edu/fall23/lecture/dataparallel/slide_17</a></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>void exclusive_scan_iterative(int* start, int* end, int* output) {
+
+    int N = end - start;
+    memmove(output, start, N*sizeof(int));
+    
+    // upsweep phase
+    for (int two_d = 1; two_d &lt;= N/2; two_d*=2) {
+        int two_dplus1 = 2*two_d;
+        parallel_for (int i = 0; i &lt; N; i += two_dplus1) {
+            output[i+two_dplus1-1] += output[i+two_d-1];
+        }
+    }
+
+    output[N-1] = 0;
+
+    // downsweep phase
+    for (int two_d = N/2; two_d &gt;= 1; two_d /= 2) {
+        int two_dplus1 = 2*two_d;
+        parallel_for (int i = 0; i &lt; N; i += two_dplus1) {
+            int t = output[i+two_d-1];
+            output[i+two_d-1] = output[i+two_dplus1-1];
+            output[i+two_dplus1-1] += t;
+        }
+    }
+}
+</code></pre><p>We would like you to use this algorithm to implement a version of parallel prefix sum in CUDA.  You must implement <code>exclusive_scan</code> function in <code>scan/scan.cu</code>. Your implementation will consist of both host and device code.  The implementation will require multiple CUDA kernel launches (one for each parallel_for loop in the pseudocode above).</p>
+<p><strong>Note:</strong> In the starter code, the reference solution scan implementation above assumes that the input array's length (<code>N</code>) is a power of 2.  In the <code>cudaScan</code> function, we solve this problem by rounding the input array length to the next power of 2 when allocating the corresponding buffers on the GPU.  However, the code only copies back <code>N</code> elements from the GPU buffer back to the CPU buffer.  This fact should simplify your CUDA implementation.</p>
+<p>Compilation produces the binary <code>cudaScan</code>.  Commandline usage is as follows:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Usage: ./cudaScan [options] 
+
+Program Options:
+  -m  --test &lt;TYPE&gt;      Run specified function on input.  Valid tests are: scan, find_repeats (default: scan)
+  -i  --input &lt;NAME&gt;     Run test on given input type. Valid inputs are: ones, random (default: random)
+  -n  --arraysize &lt;INT&gt;  Number of elements in arrays
+  -t  --thrust           Use Thrust library implementation
+  -?  --help             This message
+</code></pre><h4 id="implementing-find-repeats-using-prefix-sum-">Implementing "Find Repeats" Using Prefix Sum #### </h4>
+<p>Once you have written <code>exclusive_scan</code>, implement the function <code>find_repeats</code> in <code>scan/scan.cu</code>. This will involve writing more device code, in addition to one or more calls to <code>exclusive_scan()</code>. Your code should write the list of repeated elements into the provided output pointer (in device memory), and then return the size of the output list.</p>
+<p>When calling your <code>exclusive_scan</code> implementation, remember that the contents of the <code>start</code> array are copied over to the <code>output</code> array.  Also, the arrays passed to <code>exclusive_scan</code> are assumed to be in <code>device</code> memory.</p>
+<p><strong>Grading:</strong> We will test your code for correctness and performance on random input arrays.</p>
+<p>For reference, a scan score table is provided below, showing the performance of a simple CUDA implementation on a K80 GPU.  To check the correctness and performance score of your <code>scan</code> and <code>find_repeats</code> implementation, run <strong><code>./checker.pl scan</code></strong> and <strong><code>./checker.pl find_repeats</code></strong> respectively.  Doing so will produce a reference table as shown below; your score is based solely on the performance of your code.  In order to get full credit, your code must perform within 20% of the provided reference solution.</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>-------------------------
+Scan Score Table:
+-------------------------
+-------------------------------------------------------------------------
+| Element Count   | Ref Time        | Student Time    | Score           |
+-------------------------------------------------------------------------
+| 1000000         | 0.766           | 0.143 (F)       | 0               |
+| 10000000        | 8.876           | 0.165 (F)       | 0               |
+| 20000000        | 17.537          | 0.157 (F)       | 0               |
+| 40000000        | 34.754          | 0.139 (F)       | 0               |
+-------------------------------------------------------------------------
+|                                   | Total score:    | 0/5             |
+-------------------------------------------------------------------------
+</code></pre><p>This part of the assignment is largely about getting more practice with writing CUDA and thinking in a data parallel manner, and not about performance tuning code. Getting full performance points on this part of the assignment should not require much (or really any) performance tuning, just a direct port of the algorithm pseudocode to CUDA.  However, there's one trick:  a naive implementation of scan might launch N CUDA threads for each iteration of the parallel loops in the pseudocode, and using conditional execution in the kernel to determine which threads actually need to do work.  Such a solution will not be performant! (Consider the last outmost loop iteration of the upsweep phase, where only two threads would do work!).  A full credit solution will only launch one CUDA thread for each iteration of the innermost parallel loops.</p>
+<p><strong>Test Harness:</strong> By default, the test harness runs on a pseudo-randomly generated array that is the same every time<br>
+the program is run, in order to aid in debugging. You can pass the argument <code>-i random</code> to run on a random array - we<br>
+will do this when grading. We encourage you to come up with alternate inputs to your program to help you evaluate it.<br>
+You can also use the <code>-n &lt;size&gt;</code> option to change the length of the input array.</p>
+<p>The argument <code>--thrust</code> will use the <a href="http://thrust.github.io/">Thrust Library's</a> implementation of <a href="http://thrust.github.io/doc/group__prefixsums.html">exclusive scan</a>.  <strong>Up to two points of extra credit for anyone that can create an implementation is competitive with Thrust.</strong></p>
+<h2 id="part-3-a-simple-circle-renderer-85-pts-">Part 3: A Simple Circle Renderer (85 pts) ## </h2>
+<p>Now for the real show!</p>
+<p>The directory <code>/render</code> of the assignment starter code contains an implementation of renderer that draws colored<br>
+circles. Build the code, and run the render with the following command line: <code>./render -r cpuref rgb</code>. The program will output an image <code>output_0000.ppm</code> containing three circles. Now run the renderer with the command line <code>./render -r cpuref snow</code>. Now the output image will be falling snow.  PPM images can be viewed directly on OSX via preview.  For windows you might need to download a viewer.</p>
+<p>Note: you can also use the <code>-i</code> option to send renderer output to the display instead of a file.  (In the case of snow, you'll see an animation of falling snow.)  However, to use interactive mode you'll need to be able to setup X-windows forwarding to your local machine.  (<a href="http://atechyblog.blogspot.com/2014/12/google-cloud-compute-x11-forwarding.html">This reference</a> or <a href="https://stackoverflow.com/questions/25521486/x11-forwarding-from-debian-on-google-compute-engine">this reference</a> may help.)</p>
+<p>The assignment starter code contains two versions of the renderer: a sequential, single-threaded C++<br>
+reference implementation, implemented in <code>refRenderer.cpp</code>, and an <em>incorrect</em> parallel CUDA implementation in<br>
+<code>cudaRenderer.cu</code>.</p>
+<h3 id="renderer-overview-">Renderer Overview ### </h3>
+<p>We encourage you to familiarize yourself with the structure of the renderer codebase by inspecting the reference<br>
+implementation in <code>refRenderer.cpp</code>. The method <code>setup</code> is called prior to rendering the first frame. In your CUDA-accelerated<br>
+renderer, this method will likely contain all your renderer initialization code (allocating buffers, etc). <code>render</code><br>
+is called each frame and is responsible for drawing all circles into the output image. The other main function of<br>
+the renderer, <code>advanceAnimation</code>, is also invoked once per frame. It updates circle positions and velocities.<br>
+You will not need to modify <code>advanceAnimation</code> in this assignment.</p>
+<p>The renderer accepts an array of circles (3D position, velocity, radius, color) as input. The basic sequential<br>
+algorithm for rendering each frame is:</p>
+<pre class="language-text">Clear image
+for each circle
+    update position and velocity
+for each circle
+    compute screen bounding box
+    for all pixels in bounding box
+        compute pixel center point
+        if center point is within the circle
+            compute color of circle at point
+            blend contribution of circle into image for this pixel
+</pre>
+<p>The figure below illustrates the basic algorithm for computing circle-pixel coverage using point-in-circle tests. Notice that a circle contributes color to an output pixel only if the pixel's center lies within the circle.</p>
+<p><img src="handout/point_in_circle.jpg?raw=true" alt="Point in circle test" title="A simple algorithm for computing the contribution of a circle to the output image: All pixels within the circle's bounding box are tested for coverage. For each pixel in the bounding box, the pixel is considered to be covered by the circle if its center point (black dots) is contained within the circle. Pixel centers that are inside the circle are colored red. The circle's contribution to the image will be computed only for covered pixels."></p>
+<p>An important detail of the renderer is that it renders <strong>semi-transparent</strong> circles. Therefore, the color of any one pixel is not the color of a single circle, but the result of blending the contributions of all the semi-transparent circles overlapping the pixel (note the "blend contribution" part of the pseudocode above).  The renderer represents the color of a circle via a 4-tuple of red (R), green (G), blue (B), and opacity (alpha) values (RGBA). Alpha = 1 corresponds to a fully opaque circle.  Alpha = 0 corresponds to a fully transparent circle.  To draw a semi-transparent circle with color <code>(C_r, C_g, C_b, C_alpha)</code> on top of a pixel with color <code>(P_r, P_g, P_b)</code>, the renderer uses the following math:</p>
+<pre>   result_r = C_alpha * C_r + (1.0 - C_alpha) * P_r
+   result_g = C_alpha * C_g + (1.0 - C_alpha) * P_g
+   result_b = C_alpha * C_b + (1.0 - C_alpha) * P_b
+</pre>
+<p>Notice that composition is not commutative (object X over Y does not look the same as object Y over X), so it's important that the render draw circles in a manner that follows the order they are provided by the application. (You can assume the application provides the circles in depth order.)  For example, consider the two images below where a blue circle is drawn OVER a green circle which is drawn OVER a red circle.  In the image on the left, the circles are drawn into the output image in the correct order.  In the image on the right, the circles are drawn in a different order, and the output image does not look correct.</p>
+<p><img src="handout/order.jpg?raw=true" alt="Ordering" title="The renderer must be careful to generate output that is the same as what is generated when sequentially drawing all circles in the order provided by the application."></p>
+<h3 id="cuda-renderer-">CUDA Renderer ### </h3>
+<p>After familiarizing yourself with the circle rendering algorithm as implemented in the reference code, now<br>
+study the CUDA implementation of the renderer provided in <code>cudaRenderer.cu</code>. You can run the CUDA<br>
+implementation of the renderer using the <code>--renderer cuda (or -r cuda)</code> cuda program option.</p>
+<p>The provided CUDA implementation parallelizes computation across all input circles, assigning one circle to<br>
+each CUDA thread. While this CUDA implementation is a complete implementation of the mathematics of<br>
+a circle renderer, it contains several major errors that you will fix in this assignment. Specifically: the current<br>
+implementation does not ensure image update is an atomic operation and it does not preserve the required<br>
+order of image updates (the ordering requirement will be described below).</p>
+<h3 id="renderer-requirements-">Renderer Requirements ### </h3>
+<p>Your parallel CUDA renderer implementation must maintain two invariants that are preserved trivially in<br>
+the sequential implementation.</p>
+<ol>
+<li><strong>Atomicity:</strong> All image update operations must be atomic. The critical region includes reading the<br>
+four 32-bit floating-point values (the pixel's rgba color), blending the contribution of the current circle with<br>
+the current image value, and then writing the pixel's color back to memory.</li>
+<li><strong>Order:</strong> Your renderer must perform updates to an image pixel in <em>circle input order</em>. That is, if<br>
+circle 1 and circle 2 both contribute to pixel P, any image updates to P due to circle 1 must be applied to the<br>
+image before updates to P due to circle 2. As discussed above, preserving the ordering requirement<br>
+allows for correct rendering of transparent circles. (It has a number of other benefits for graphics<br>
+systems. If curious, talk to Kayvon.) <strong>A key observation is that the definition of order only specifies the order of updates to the same pixel.</strong>  Thus, as shown below, there are no ordering requirements between circles that do not contribute to the same pixel. These circles can be processed independently.</li>
+</ol>
+<p><img src="handout/dependencies.jpg?raw=true" alt="Dependencies" title="The contributions of circles 1, 2, and 3 must be applied to overlapped pixels in the order the circles are provided to the renderer."></p>
+<p>Since the provided CUDA implementation does not satisfy either of these requirements, the result of not correctly<br>
+respecting order or atomicity can be seen by running the CUDA renderer implementation on the rgb and circles scenes.<br>
+You will see horizontal streaks through the resulting images, as shown below. These streaks will change with each frame.</p>
+<p><img src="handout/bug_example.jpg?raw=true" alt="Order_errors" title="Errors in the output due to lack of atomicity in frame-buffer update (notice streaks in bottom of image)."></p>
+<h3 id="what-you-need-to-do-">What You Need To Do ### </h3>
+<p><strong>Your job is to write the fastest, correct CUDA renderer implementation you can</strong>. You may take any approach you<br>
+see fit, but your renderer must adhere to the atomicity and order requirements specified above. A solution that does not meet both requirements will be given no more than 12 points on part 3 of the assignment. We have already given you such a solution!</p>
+<p>A good place to start would be to read through <code>cudaRenderer.cu</code> and convince yourself that it <em>does not</em> meet the correctness requirement. In particular, look at how <code>CudaRenderer:render</code> launches the CUDA kernel <code>kernelRenderCircles</code>.  (<code>kernelRenderCircles</code> is where all the work happens.) To visually see the effect of violation of above two requirements, compile the program with <code>make</code>. Then run <code>./render -r cuda rand10k</code> which should display the image with 10K circles, shown in the bottom row of the image above.  Compare this (incorrect) image with the image generated by sequential code by running <code>./render -r cpuref rand10k</code>.</p>
+<p>We recommend that you:</p>
+<ol>
+<li>First rewrite the CUDA starter code implementation so that it is logically correct when running in parallel (we recommend an approach that does not require locks or synchronization)</li>
+<li>Then determine what performance problem is with your solution.</li>
+<li>At this point the real thinking on the assignment begins... (Hint: the circle-intersects-box tests provided to you in <code>circleBoxTest.cu_inl</code> are your friend.  You are encouraged to use these subroutines.)</li>
+</ol>
+<p>Following are commandline options to <code>./render</code>:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Usage: ./render [options] scenename
+Valid scenenames are: rgb, rgby, rand10k, rand100k, biglittle, littlebig, pattern,
+                      bouncingballs, fireworks, hypnosis, snow, snowsingle
+Program Options:
+  -r  --renderer &lt;cpuref/cuda&gt;  Select renderer: ref or cuda (default=cuda)
+  -s  --size  &lt;INT&gt;             Make rendered image &lt;INT&gt;x&lt;INT&gt; pixels (default=1024)
+  -b  --bench &lt;START:END&gt;       Run for frames [START,END)   (default [0,1))
+  -f  --file  &lt;FILENAME&gt;        Output file name (FILENAME_xxxx.ppm)
+  -c  --check                   Check correctness of CUDA output against CPU reference
+  -i  --interactive             Render output to interactive display
+  -?  --help                    This message
+</code></pre><p><strong>Checker code:</strong> To detect correctness of the program, <code>render</code> has a convenient <code>--check</code> option. This option runs the sequential version of the reference CPU renderer along with your CUDA renderer and then compares the resulting images to ensure correctness. The time taken by your CUDA renderer implementation is also printed.</p>
+<p>We provide a total of five circle datasets you will be graded on.  However, in order to receive full credit, your code must pass all of our correctness-tests.  To check the correctness and performance score of your code, run <strong><code>./checker.py</code></strong> (notice the .py extension) in the <code>/render</code> directory. If you run it on the starter code, the program will print a table like the following, along with the results of our entire test set:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>------------
+Score table:
+------------
+--------------------------------------------------------------------------
+| Scene Name      | Ref Time (T_ref) | Your Time (T)   | Score           |
+--------------------------------------------------------------------------
+| rgb             | 0.2321           | (F)             | 0               |
+| rand10k         | 5.7317           | (F)             | 0               |
+| rand100k        | 25.8878          | (F)             | 0               |
+| pattern         | 0.7165           | (F)             | 0               |
+| snowsingle      | 38.5302          | (F)             | 0               |
+| biglittle       | 14.9562          | (F)             | 0               |
+--------------------------------------------------------------------------
+|                                    | Total score:    | 0/72            |
+--------------------------------------------------------------------------
+</code></pre><p>Note: on some runs, you <em>may</em> receive credit for some of these scenes, since the provided renderer's runtime is non-deterministic sometimes it might be correct. This doesn't change the fact that the current CUDA renderer is in general incorrect.</p>
+<p>"Ref time" is the performance of our reference solution on your current machine (in the provided <code>render_ref</code> executable). "Your time" is the performance of your current CUDA renderer solution, where an <code>(F)</code> indicates an incorrect solution. Your grade will depend on the performance of your implementation compared to these reference implementations (see Grading Guidelines).</p>
+<p>Along with your code, we would like you to hand in a clear, high-level description of how your implementation works as well as a brief description of how you arrived at this solution. Specifically address approaches you tried along the way, and how you went about determining how to optimize your code (For example, what measurements did you perform to guide your optimization efforts?).</p>
+<p>Aspects of your work that you should mention in the write-up include:</p>
+<ol>
+<li>Include both partners names and SUNet id's at the top of your write-up.</li>
+<li>Replicate the score table generated for your solution and specify which machine you ran your code on.</li>
+<li>Describe how you decomposed the problem and how you assigned work to CUDA thread blocks and threads (and maybe even warps).</li>
+<li>Describe where synchronization occurs in your solution.</li>
+<li>What, if any, steps did you take to reduce communication requirements (e.g., synchronization or main memory bandwidth requirements)?</li>
+<li>Briefly describe how you arrived at your final solution. What other approaches did you try along the way. What was wrong with them?</li>
+</ol>
+<h3 id="grading-guidelines-">Grading Guidelines ### </h3>
+<ul>
+<li>
+<p>The write-up for the assignment is worth 7 points.</p>
+</li>
+<li>
+<p>Your implementation is worth 72 points. These are equally divided into 12 points per scene as follows:</p>
+<ul>
+<li>2 correctness points per scene.</li>
+<li>10 performance points per scene (only obtainable if the solution is correct).  Your performance will be graded with respect to the performance of a provided benchmark reference renderer, T<sub>ref</sub>:
+<ul>
+<li>No performance points will be given for solutions having time (T) 10 times the magnitude of T<sub>ref</sub>.</li>
+<li>Full performance points will be given for solutions within 20% of the optimized solution ( T &lt; 1.20 * T<sub>ref</sub> )</li>
+<li>For other values of T (for 1.20 T<sub>ref</sub> &lt;= T &lt; 10 * T<sub>ref</sub>), your performance score on a scale 1 to 10 will be calculated as: <code>10 * T_ref / T</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Your implementation's performance on the class leaderboard is worth the final 6 points. Submission and grading details for the leaderboard will be detailed in a subsequent Ed post.</p>
+</li>
+<li>
+<p>Up to five points extra credit (instructor discretion) for solutions that achieve significantly greater performance than required. Your write up must clearly explain your approach thoroughly.</p>
+</li>
+<li>
+<p>Up to five points extra credit (instructor discretion) for a high-quality parallel CPU-only renderer implementation that achieves good utilization of all cores and SIMD vector units of the cores. Feel free to use any tools at your disposal (e.g., SIMD intrinsics, ISPC, pthreads).  To receive credit you should analyze the performance of your GPU and CPU-based solutions and discuss the reasons for differences in implementation choices made.</p>
+</li>
+</ul>
+<p>So the total points for this project is as follows:</p>
+<ul>
+<li>part 1 (5 points)</li>
+<li>part 2 (10 points)</li>
+<li>part 3 write up (7 points)</li>
+<li>part 3 implementation (72 points)</li>
+<li>part 3 leaderboard (6 points)</li>
+<li>potential <strong>extra</strong> credit (up to 10 points)</li>
+</ul>
+<h2 id="assignment-tips-and-hints-">Assignment Tips and Hints ## </h2>
+<p>Below are a set of tips and hints compiled from previous years.  Note that there are various ways to implement your renderer and not all hints may apply to your approach.</p>
+<ul>
+<li>There are two potential axes of parallelism in this assignment. One axis is <em>parallelism across pixels</em> another is <em>parallelism across circles</em> (provided the ordering requirement is respected for overlapping circles).  Solutions will need to exploit both types of parallelism, potentially at different parts of the computation.</li>
+<li>The circle-intersects-box tests provided to you in <code>circleBoxTest.cu_inl</code> are your friend.  You are encouraged to use these subroutines.</li>
+<li>The shared-memory prefix-sum operation provided in <code>exclusiveScan.cu_inl</code> may be valuable to you on this assignment (not all solutions may choose to use it). See the simple description of a prefix-sum <a href="http://thrust.github.io/doc/group__prefixsums.html">here</a>. We<br>
+have provided an implementation of an exclusive prefix-sum on a <strong>power-of-two-sized</strong> arrays in shared memory.  <strong>The provided code does not work on non-power-of-two inputs and IT ALSO REQUIRES THAT THE NUMBER OF THREADS IN THE THREAD BLOCK BE THE SIZE OF THE ARRAY. PLEASE READ THE COMMENTS IN THE CODE.</strong></li>
+<li>You are allowed to use the <a href="http://thrust.github.io/">Thrust library</a> in your implementation if you so choose.  Thrust is not necessary to achieve the performance of the optimized CUDA reference implementations.  There is one popular way of solving the problem that uses the shared memory prefix-sum implementation that we give you.  There another popular way that uses the prefix-sum routines in the Thrust library.  Both are valid solution strategies.</li>
+<li>Is there data reuse in the renderer? What can be done to exploit this reuse?</li>
+<li>How will you ensure atomicity of image update since there is no CUDA language primitive that performs the logic of the image update operation atomically? Constructing a lock out of global memory atomic operations is one solution, but keep in mind that even if your image update is atomic, the updates must be performed in the required order.  <strong>We suggest that you think about ensuring order in your parallel solution first, and only then consider the atomicity problem (if it still exists at all) in your solution.</strong></li>
+<li>If you find yourself with free time, have fun making your own scenes!</li>
+</ul>
+<h3 id="catching-cuda-errors-">Catching CUDA Errors ### </h3>
+<p>By default, if you access an array out of bounds, allocate too much memory, or otherwise cause an error, CUDA won't normally inform you; instead it will just fail silently and return an error code. You can use the following macro (feel free to modify it) to wrap CUDA calls:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>#define DEBUG
+
+#ifdef DEBUG
+#define cudaCheckError(ans) { cudaAssert((ans), __FILE__, __LINE__); }
+inline void cudaAssert(cudaError_t code, const char *file, int line, bool abort=true)
+{
+   if (code != cudaSuccess) 
+   {
+      fprintf(stderr, "CUDA Error: %s at %s:%d\n", 
+        cudaGetErrorString(code), file, line);
+      if (abort) exit(code);
+   }
+}
+#else
+#define cudaCheckError(ans) ans
+#endif
+</code></pre><p>Note that you can undefine DEBUG to disable error checking once your code is correct for improved performance.</p>
+<p>You can then wrap CUDA API calls to process their returned errors as such:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>cudaCheckError( cudaMalloc(&amp;a, size*sizeof(int)) );
+</code></pre><p>Note that you can't wrap kernel launches directly. Instead, their errors will be caught on the next CUDA call you wrap:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>kernel&lt;&lt;&lt;1,1&gt;&gt;&gt;(a); // suppose kernel causes an error!
+cudaCheckError( cudaDeviceSynchronize() ); // error is printed on this line
+</code></pre><p>All CUDA API functions, <code>cudaDeviceSynchronize</code>, <code>cudaMemcpy</code>, <code>cudaMemset</code>, and so on can be wrapped.</p>
+<p><strong>IMPORTANT:</strong> if a CUDA function error'd previously, but wasn't caught, that error will show up in the next error check, even if that wraps a different function. For example:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>...
+line 742: cudaMalloc(&amp;a, -1); // executes, then continues
+line 743: cudaCheckError(cudaMemcpy(a,b)); // prints "CUDA Error: out of memory at cudaRenderer.cu:743"
+...
+</code></pre><p>Therefore, while debugging, it's recommended that you wrap <strong>all</strong> CUDA API calls (at least in code that you wrote).</p>
+<p>(Credit: adapted from <a href="https://stackoverflow.com/questions/14038589/what-is-the-canonical-way-to-check-for-errors-using-the-cuda-runtime-api">this Stack Overflow post</a>)</p>
+<h2 id="34-hand-in-instructions-">3.4 Hand-in Instructions ## </h2>
+<p>Please submit your work using Gradescope. If you are working with a partner please remember to tag your partner on gradescope.</p>
+<ol>
+<li><strong>Please submit your writeup as the file <code>writeup.pdf</code>.</strong></li>
+<li><strong>Please submit run <code>sh create_submission.sh</code> to generate a zip to submit to gradescope.</strong> Note that this will run make clean in your code directories so you will have to run make again to run your code. If the script errors saying 'Permission denied', you should run <code>chmod +x create\_submission.sh</code> and then try rerunning the script.</li>
+</ol>
+<p>Our grading scripts will rerun the checker code allowing us to verify your score matches what you submitted in the <code>writeup.pdf</code>.  We might also try to run your code on other datasets to further examine its correctness.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

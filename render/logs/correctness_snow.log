@@ -1,0 +1,25 @@
+Rendering to 1024x1024 image
+Loaded scene with 100000 circles
+Loaded scene with 100000 circles
+---------------------------------------------------------
+Initializing CUDA for CudaRenderer
+Found 1 CUDA devices
+Device 0: NVIDIA GeForce MX570
+   SMs:        16
+   Global mem: 1862 MB
+   CUDA Cap:   8.6
+---------------------------------------------------------
+
+Running benchmark, 1 frames, beginning at frame 0 ...
+Dumping frames to output_xxx.ppm
+Copying image data from device
+Wrote image file output_0000.ppm
+Copying image data from device
+***************** Correctness check passed **************************
+Clear:    0.6199 ms
+Advance:  0.4698 ms
+Render:   2558.2972 ms
+Total:    2559.3869 ms
+File IO:  246.1396 ms
+
+Overall:  2.8717 sec (note units are seconds)
