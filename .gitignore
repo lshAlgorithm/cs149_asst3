@@ -1,10 +1,5 @@
 *.html
 *.ppm
 
-render/logs
-render/objs
-
-saxpy/objs
-
-scan/objs
-scan/logs
+**/logs/**
+**/objs/**
